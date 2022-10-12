@@ -1,0 +1,22 @@
+---
+Importando dados
+---
+
+```{r}
+install.packages("readxl")
+library(readxl)
+```
+
+Texto
+```{r}
+x = read.csv(file.choose(), header = TRUE, sep = ",")
+head(x)
+#x = read.csv("Credit.csv", header = TRUE, sep = ",")
+#x
+```
+
+Excel
+```{r}
+dados <- read_excel("R/Credit.xlsx")
+dados
+```
