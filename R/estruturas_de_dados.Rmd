@@ -1,0 +1,43 @@
+\-\--
+
+Estruturas de Dados
+
+\-\--
+
+Vetores
+
+```{r}
+X = c(1,2,3,4,5,6) |
+X
+X[1]
+X[1] = 10
+X[1]
+```
+
+Vetores de outros tipos
+
+```{r}
+Y = c('a', 'b', 'c', 'd')
+Y
+Z = c(1L, 2L, 3L)
+Z
+```
+
+Matrizes
+
+```{r}
+VADeaths
+colnames(VADeaths)
+rownames(VADeaths)
+```
+
+```{r}
+# só uma coluna
+VADeaths[,1]
+
+# só uma linha
+VADeaths[1,]
+
+#linhas 1 até 3
+VADeaths[1:3,]
+```

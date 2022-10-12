@@ -1,0 +1,161 @@
+<!-- 
+  Dataframe$coluna 
+-->
+
+<!-- 
+  Listas - sequência de objetos com classes diferentes
+
+  Harman23.cor[1]
+  Harman23.cor[2]
+
+-->
+
+<!-- 
+  Fatores
+
+  - Variáveis categóricas
+
+  Dados = c(1,2,3)
+  Dados = factor(dados)
+
+-->
+
+<!-- 
+  Funções
+
+  - Semelhantes e functions e procedures de qualquer linhagem
+    Podem ou não requerer argumentos (parâmetros)
+
+    ex: 
+      getwd()
+      [1] "C:/Users/Fernando/Docuemtos"
+
+    sd(x)
+    [1] 14.93039
+
+ -->
+ 
+<!-- 
+  Argumentos
+
+    - O R é flexível com argumentos:
+      Você pode simplesmente passar os argumentos pela ordem esperada, sem nome
+      Você pode nomear os argumentos
+      Você passar os primeiros sem nome e os últimos nomeados, omitindo intermediários
+
+    head(x=iris, n=2)
+    head(iris)
+    head(iris, 2)
+    head(n=22)
+    Error in head.default(n = 22) : argumento "x" ausente, sem padrão
+ -->
+
+<!-- 
+  Principais Funções
+
+    - head()
+      Visualiza as primeiras linhas de um conjunto de dados
+
+    - tail()
+      Visualiza as últimas linhas de um conjunto de dados
+    
+    - summary()
+      Resumo estatístico de um conjunto de dados
+
+    - file.choose()
+      Caminho de arquivos
+    
+    - dim()
+      DimensÕes de um conjunto de dados (numero de colunas e número de linhas)
+
+    - length()
+      Comprimento do vetor
+
+    - colnames()
+      Nomes das colunas de um conjunto de dados
+
+    - rownames()
+      Nomes das linhas de um conjunto de dados
+
+    - colbind()
+      Adiciona coluna
+
+    - predict()
+      Funções genéricas de Machine Learning
+
+    - VD1 + VD2 + VDn ~ VI1 + VI2 + VIn
+      Vendas ~ Temperatura
+      Formula - (~) - separa as variáveis dependentes das independentes
+      Caso você precise colocar todas as variáveis como independentes e apenas uma como dependente é possível:
+      Vendas ~ . - O R entende que o ponto generaliza todas as outras variáveis alem de V.  
+ -->
+
+<!-- 
+  Importação 
+
+    - read.csv()
+      Lê um arquivo csv, e é possível passar as configurações do arquivo
+
+    - Pacote RODBC (Importando dados do banco de dados)
+      odbcDriverConnect() - faz a conexão com o banco
+      sqlQuery() - faz a query no banco 
+      odbcClose() - finaliza a conexão
+
+    - XLSX 
+      Responsável por fazer a leitura de planilhas excel
+      Para transformar em um Dataframe utiliza-se o comando read.xlsx
+
+    - Weka e outras ferramentas
+      Pacote foreing
+      read.arff()
+ -->
+
+<!-- 
+  Principais estruturas de Programação
+
+  if (condicao)
+  {
+
+  }
+  else
+  {
+
+  }
+
+  ifelse(condicao, retorno True, retorno False)
+
+  Laços
+  for(var in sequencia)
+  {
+
+  }
+
+  while(condicao)
+  {
+
+  }
+
+  break - interrompe o laço
+  next - pular para próxima execução
+ -->
+
+<!-- 
+  Funções
+
+  nome <- function(parametros){
+    return = x
+  }
+  Se você não utilizar o return, o R retorna a última interação feita
+  ex: 
+  nome <- function(parametros){
+    x = 10 
+  }
+  Ele retornaria o valor de x da mesma forma 
+-->
+
+<!-- 
+  Recursos Adicionais
+    - Livros: 
+      R in Action - Robert l. Kabacoff
+      
+ -->
