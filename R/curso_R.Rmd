@@ -66,7 +66,7 @@
       Caminho de arquivos
     
     - dim()
-      DimensÕes de um conjunto de dados (numero de colunas e número de linhas)
+      Dimensões de um conjunto de dados (numero de colunas e número de linhas)
 
     - length()
       Comprimento do vetor
