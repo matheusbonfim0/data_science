@@ -1,0 +1,24 @@
+```{r}
+#install.packages("stargazer") # nolint
+library(stargazer)
+```
+
+Formato Latex
+```{r}
+stargazer(iris)
+```
+
+HTML
+```{r}
+stargazer(iris, type = "html")
+```
+
+Texto
+```{r}
+stargazer(iris, type = "text")
+```
+
+Salva em disco
+```{r}
+stargazer(women, out = "R/women.tex", summary = FALSE)
+```
