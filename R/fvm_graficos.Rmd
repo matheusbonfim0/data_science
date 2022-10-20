@@ -1,0 +1,60 @@
+```{r}
+library("RColorBrewer")
+```
+```{r}
+df <- read.csv("R/dados.csv", sep = ";")
+head(df)
+summary(df)
+```
+```{r}
+summary(df$PIB)
+summary(df$VALOREMPENHO)
+```
+Procurando valores NAs
+```{r}
+df[!complete.cases(df), ]
+```
+
+```{r}
+boxplot(df$PIB, main = "Valores de PIB",
+col = brewer.pal(n = 3, name = "Paired"), outline = FALSE)
+boxplot(df$VALOREMPENHO, main = "Valores de Empenho",
+col = brewer.pal(n = 3, name = "Pastel1"), outline = FALSE)
+hist(df$PIB, main = "Valores de Empenho",
+col = brewer.pal(n = 3, name = "Paired"))
+hist(df$VALOREMPENHO, main = "Valores de Empenho",
+col = brewer.pal(n = 3, name = "Paired"))
+```
+
+```{r}
+MEMP <- head(df[order(-df$VALOREMPENHO), ], 10)
+barplot(MEMP$VALOREMPENHO, col = brewer.pal(n = 10, name = "RdBu"),
+las = 2, main = "Maiores Empenhos")
+legend("topright", legend = MEMP$MUNICIPIO,
+col = brewer.pal(n = 10, name = "RdBu"),
+lty = 1:2, cex = 0.8, ncol = 2, lwd = 4
+)
+box()
+```
+
+```{r}
+MPIB <- head(df[order(-df$PIB), ], 10)
+barplot(MPIB$PIB, col = brewer.pal(n = 10, name = "Spectral"),
+las = 2, main = "Maiores PIBs")
+legend("topright", legend = MEMP$MUNICIPIO,
+col = brewer.pal(n=10, name = "Spectral"),
+lty = 1:2, cex = 0.8, ncol = 2, lwd = 4
+)
+box()
+```
+
+```{r}
+df$PROPORCAO <- df$VALOREMPENHO / df$PIB
+MPROP <- head(df[order(-df$PROPORCAO), ], 10)
+barplot(MPROP$PROPORCAO, col = brewer.pal(n = 8, name = "Set2"),
+las = 2, main = "Maiores Gastos em Proporção ao PIB")
+legend("topright", legend = MPROP$MUNICIPIO,
+col = brewer.pal(n = 8, name = "Set2"), lty = 1:2, cex = 0.8,
+ncol = 2, lwd = 4)
+box()
+```
